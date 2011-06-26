@@ -1,3 +1,6 @@
+1.0.5
+* Make it easier to override FancyIRB startup options
+
 1.0.4
 * improve error-handling
 * fix broken loading of boson + interactive_editor

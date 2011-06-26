@@ -7,11 +7,11 @@ require 'rbconfig'
 
 unless defined?(Ripl) && Ripl.respond_to?(:started?) && Ripl.started?
   Irbtools.add_library :wirb, :late => true do # result colors, install ripl-color_result for ripl colorization
-    Wirb.start 
+    Wirb.start
   end
 
   Irbtools.add_library :fancy_irb, :late => true do # put result as comment instead of a new line and colorful errors/streams
-    FancyIrb.start
+    FancyIrb.start(Irbtools.fancy_irb_options)
   end
 end
 

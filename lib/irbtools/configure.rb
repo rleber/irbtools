@@ -30,6 +30,9 @@ module Irbtools
 
     # set this to true before loading this file to deactivate loading of default libraries
     attr_accessor :minimal
+    
+    # set this if you want to pass options to FancyIrb when it starts
+    attr_accessor :fancy_irb_options
 
     # a hash of arrays of libraries that get loaded
     # keys determine if lib is required, required on sub-session or autoloaded
