@@ -54,14 +54,7 @@ if defined?(IRB) || defined?(Ripl)
     IRB.conf[:SAVE_HISTORY] = 2000                 # how many lines will go to ~/.irb_history
 
     # prompt
-    (IRB.conf[:PROMPT] ||= {} ).merge!( {:IRBTOOLS => {
-      :PROMPT_I => ">> ",    # normal
-      :PROMPT_N => "|  ",    # indenting
-      :PROMPT_C => " > ",    # continuing a statement
-      :PROMPT_S => "%l> ",   # continuing a string
-      :RETURN   => "=> %s \n",
-      :AUTO_INDENT => true,
-    }})
+    (IRB.conf[:PROMPT] ||= {} ).merge!( {:IRBTOOLS => Irbtools.prompts})
 
     IRB.conf[:PROMPT_MODE] = :IRBTOOLS
   end

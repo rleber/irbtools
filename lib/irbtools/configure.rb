@@ -115,6 +115,17 @@ module Irbtools
       require File.expand_path( '../irbtools.rb', File.dirname(__FILE__) )
     end
     alias start init
+    
+    def prompts
+      @prompts ||= {
+        :PROMPT_I => ">> ",    # normal
+        :PROMPT_N => "|  ",    # indenting
+        :PROMPT_C => " > ",    # continuing a statement
+        :PROMPT_S => "%l> ",   # continuing a string
+        :RETURN   => "=> %s \n",
+        :AUTO_INDENT => true,
+      }
+    end
   end
 end
 
