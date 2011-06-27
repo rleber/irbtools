@@ -1,5 +1,6 @@
 1.0.5
 * Make it easier to override FancyIRB startup options
+* Make it easier to customize irb prompts
 
 1.0.4
 * improve error-handling
